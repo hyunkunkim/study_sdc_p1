@@ -2,5 +2,8 @@
 *.ipynb_checkpoints/
 data/
 training/
-experiments/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/
 memo.txt
+experiments/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/
+experiments/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/
+experiments/checkpoint
+experiments/ckpt*.*
