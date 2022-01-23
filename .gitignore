@@ -2,3 +2,4 @@
 *.ipynb_checkpoints/
 data/
 training/
+experiments/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/
