@@ -57,6 +57,15 @@ Below shows 10 random samples from `segment-1005081002024129653_5313_150_5333_15
 ![display-10](./imgs/display10.png)
 As you can see These images look very similar despite the fact they are randomly shuffled. This is because in this driving episode the road is straight, scenery is similar, other vehicles drive at similar speed.  
 
+To get insight of appearance frequencies of each class, I've gone through all the record files and counted them. It showed that
+* The `Car` class was most frequent with 174,233 appearances.
+* The `Pedestrian` class was less than half frequentl with 52,280 appearances.
+* The `Cyclist` class was leas frequent with only 1,450 appearances.
+
+The probability and information from these frequencies are shown as the plots below.
+![probabilities](./imgs/prob.png)
+![informations](./imgs/info.png)
+
 ### Create the training - validation splits
 To split the data into training, validation and training sets follow the instructions below.
 * create three subfolders: `study_sdc_p1/data/train/`, `study_sdc_p1/data/val/`, and `study_sdc_p1/data/test/`
