@@ -6,4 +6,4 @@ memo.txt
 experiments/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/
 experiments/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/
 experiments/**/checkpoints/
-experiments/ckpt*.*
+experiments/**/ckpt*.*
