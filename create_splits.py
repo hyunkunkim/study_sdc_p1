@@ -7,6 +7,7 @@ import numpy as np
 
 from utils import get_module_logger
 
+import shutil
 
 def split(data_dir):
     """
@@ -19,6 +20,29 @@ def split(data_dir):
     
     # TODO: Split the data present in `/home/workspace/data/waymo/training_and_validation` into train and val sets.
     # You should move the files rather than copy because of space limitations in the workspace.
+    file_path = os.path.abspath(os.path.dirname(__file__))
+    files = os.listdir(data_dir)
+    random.shuffle(files)
+
+    n = len(files)
+
+    for file in files[:int(n*0.7)]:
+        src = f"{file_path}/data/waymo/training_and_validation/{file}"
+        dst = f"{file_path}/data/train/{file}"
+        shutil.move(src, dst)
+
+    for file in files[int(n*0.7):int(n*0.85)]:
+        src = f"{file_path}/data/waymo/training_and_validation/{file}"
+        dst = f"{file_path}/data/val/{file}"
+        shutil.move(src, dst)
+
+        
+    for file in files[int(n*0.85):]:
+        src = f"{file_path}/data/waymo/training_and_validation/{file}"
+        dst = f"{file_path}/data/test/{file}"
+        shutil.move(src, dst)
+
+        
 
 if __name__ == "__main__": 
     parser = argparse.ArgumentParser(description='Split data into training / validation / testing')
